@@ -1,0 +1,59 @@
+body {
+  background: rgb(0, 0, 0) !important;
+}
+
+/*Puts the text on the center*/
+#welcome_text {
+  width: 100%;
+  position: absolute;
+  font-family: "Barriecito", cursive;
+}
+
+#question_1 {
+  width: 100%;
+  position: absolute;
+  display: none;
+}
+
+#question_1 .btn {
+  width: 400px;
+  height: 80px;
+  font-family: "Barriecito", cursive;
+}
+
+#answer_a:hover {
+  background-color: #55e6c1;
+}
+#answer_b:hover {
+  background-color: #fc427b;
+}
+#answer_c:hover {
+  background-color: #d6a2e8;
+}
+#answer_d:hover {
+  background-color: #feca57;
+}
+
+#stats {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+
+#myBar {
+  background-color: #2ecc71;
+}
+
+#images {
+  visibility: hidden;
+}
+
+#playAgain {
+  margin-bottom: 100px;
+  height: 80px;
+  width: 200px;
+}
+
+#results {
+  display: none;
+}

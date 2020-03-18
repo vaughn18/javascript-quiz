@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta Names-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--End of Meta Names-->
+
+    <link rel="shortcut icon" href="cssLogo.png" alt="icon" type="image/png" />
+
+    <!--FONTS-->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--End of Fonts-->
+
+    <!--Local Stylesheet-->
+    <link rel="stylesheet" href="stylesheet.css" />
+    <!--End of local Stylesheet-->
+
+    <!--W3 Schools progress bar CSS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!--End of W3 Schools progress bar CSS-->
+
+    <!--CSS animatecss-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <!--End of css animatecss-->
+
+    <!--Bootstrap Stylesheet-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--End of Bootstrap Stylesheet-->
+
+    <title>Javascript Quiz</title>
+  </head>
+  <body>
+    <!--Loader-->
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+    <!--end of loader-->
+
+    <!--Welcome text-->
+    <div id="welcome_text" class="row h-100">
+      <div class="col-12 text-center align-self-center">
+        <img src="cssLogo.png" alt="logo" height="60" width="40" />
+        <h1 style="color: #feca57; font-family: 'Barriecito', cursive;">
+          Welcome to CSS quiz
+          <br />
+        </h1>
+        <h1 style="color:  #55e6c1; font-family: 'Barriecito', cursive;">
+          Think before you Click
+        </h1>
+        <h1
+          id="welcome_text"
+          style="color: #fc427b; font-family: 'Barriecito', cursive;"
+        >
+          Click Play to start
+        </h1>
+        <br /><br /><br />
+        <button
+          type="button"
+          class="btn btn-lg btn-outline-light"
+          onclick="question1()"
+        >
+          Play
+        </button>
+      </div>
+    </div>
+
+    <!--End of Welcome text-->
+
+    <!--Question -->
+    <div id="question_1" class="row h-100">
+      <div class="col-lg-12 text-center align-self-center">
+        <h1
+          id="question"
+          style="color: white; font-family: 'Barriecito', cursive;"
+        >
+          ....
+        </h1>
+        <br />
+        <br />
+        <!--These are the answer button. They're supposed to be radios-->
+
+        <button
+          id="answer_a"
+          type="button"
+          class="btn btn-lg btn-outline-light"
+        >
+          ....
+        </button>
+        <button
+          id="answer_b"
+          type="button"
+          class="btn btn-lg btn-outline-light"
+        >
+          ....
+        </button>
+
+        <br />
+        <br />
+
+        <!--These are the answer button. They're supposed to be radios-->
+
+        <button
+          id="answer_c"
+          type="button"
+          class="btn btn-lg btn-outline-light"
+        >
+          ...
+        </button>
+        <button
+          id="answer_d"
+          type="button"
+          class=" btn btn-lg btn-outline-light"
+        >
+          ...
+        </button>
+      </div>
+    </div>
+
+    <!--End of Question -->
+
+    <!-- Stats/Score-->
+    <div id="stats" class="row h-100">
+      <div class="col-lg-12 text-center align-self-center">
+        <div
+          class="w3-black w3-round w3-xlarge"
+          style="border: 1px solid white;"
+        >
+          <div
+            id="myBar"
+            class="w3-container w3-padding-large w3-round w3-center"
+            style="width:0%;"
+          >
+            0%
+          </div>
+        </div>
+        <br />
+        <h1
+          id="statsText"
+          style="color: white; font-family: 'Barriecito', cursive;"
+        ></h1>
+        <a id="100">
+          <img id="images" src="..." alt="award" height="200" width="190" />
+        </a>
+        <button
+          id="see_answers"
+          type="button"
+          class=" btn btn-lg btn-outline-light"
+          onclick="seeAnswers()"
+        >
+          See Answers
+        </button>
+      </div>
+    </div>
+
+    <!--RESULTS TO COMPARE ANSWERS-->
+
+    <div id="results" class="row h-100 ">
+      <div
+        class="col-lg-12 text-center align-self-center"
+        style=" font-family:'Barriecito', cursive; color:#feca57;"
+      >
+        <h1 style=" font-family:'Barriecito', cursive; color:#d6a2e8">
+          These are your results
+        </h1>
+      </div>
+
+      <div class="row padding text-center">
+        <div
+          class="col-6"
+          style=" font-family:'Barriecito', cursive; color:#feca57;"
+        >
+          <h1 style=" font-family:'Barriecito', cursive">Your Answers:</h1>
+          <br />
+          <!--1-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result0"
+          ></h3>
+          <br />
+          <!--2-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result1"
+          ></h3>
+          <br />
+          <!--3-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result2"
+          ></h3>
+          <br />
+          <!--4-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result3"
+          ></h3>
+          <br />
+          <!--5-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result4"
+          ></h3>
+          <br />
+          <!--6-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result5"
+          ></h3>
+          <br />
+          <!--7-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result6"
+          ></h3>
+          <br />
+          <!--8-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result7"
+          ></h3>
+          <br />
+          <!--9-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result8"
+          ></h3>
+          <br />
+          <!--10-->
+          <h3
+            style=" font-family:'Barriecito', cursive; color: white;"
+            id="result9"
+          ></h3>
+        </div>
+
+        <div
+          class="col-6"
+          style=" font-family:'Barriecito', cursive; color: #55e6c1"
+        >
+          <h1 style=" font-family:'Barriecito'; color: #fc427b">
+            Correct Answers:
+          </h1>
+          <br />
+          <!--1-->
+          <h3 id="answer0">Cascading style sheets</h3>
+          <br />
+          <!--2-->
+          <h3 id="answer1">Font weight</h3>
+          <br />
+          <!--3-->
+          <h3 id="answer2">Link</h3>
+          <br />
+          <!--4-->
+          <h3 id="answer3">Text-decoration</h3>
+          <br />
+          <!--5-->
+          <h3 id="answer4">Cm</h3>
+          <br />
+          <!--6-->
+          <h3 id="answer5">Em</h3>
+          <br />
+          <!--7-->
+          <h3 id="answer6">Padding</h3>
+          <br />
+          <!--8-->
+          <h3 id="answer7">Background-image</h3>
+          <br />
+          <!--9-->
+          <h3 id="answer8">Z-index</h3>
+          <br />
+          <!--10-->
+          <h3 id="answer9">Repeat-y</h3>
+        </div>
+        <div class="col-12">
+          <a href="index.html">
+            <button
+              id="playAgain"
+              type="button"
+              class=" btn btn-lg btn-outline-light"
+            >
+              Play Again
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--End of Stats/Score -->
+
+    <!--Scripts-->
+
+    <!--Local Script-->
+    <script type="text/javascript" src="script.js"></script>
+    <!--End of Local Script-->
+
+    <!--Bootstrap CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!--End of Bootstrap CDN-->
+
+    <!--End of Scripts-->
+  </body>
+</html>
